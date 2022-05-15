@@ -18,21 +18,37 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form" class="mb-4">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control"
+                  autocomplete="off"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1 id="current-city"></h1>
             <ul>
-              <li>Saturday 14 May</li>
-              <li>21:43</li>
+              <li id="date"></li>
+              <li id="time"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temp">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                  alt="cloudy"
-                  class="float-left"
-                />
+                <img src="" alt="cloudy" id="icon" class="float-left" />
                 <div class="float-left">
                   <strong id="current-temperature"></strong>
                   <span class="units">°C | <a href="#">°F</a></span>
