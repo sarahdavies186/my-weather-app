@@ -10,6 +10,13 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -18,7 +25,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-4">
+          <form id="search-form" class="mb-4 search">
             <div class="row">
               <div class="col-5"><h1 id="current-city"></h1></div>
               <div class="col-4">
@@ -41,8 +48,7 @@
           </form>
           <div class="overview">
             <ul>
-              <li id="date"></li>
-              <li id="time"></li>
+              <li class="date" id="date"></li>
             </ul>
           </div>
           <div class="row">
@@ -60,9 +66,11 @@
             </div>
             <div class="col-6">
               <ul>
-                <li class="description" id="description">Overcast clouds</li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li class="description" id="description"></li>
+                <li class="description">
+                  Humidity: <span id="humidity"></span>%
+                </li>
+                <li class="description">Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
@@ -71,11 +79,7 @@
               <div class="col-2">
                 <div class="weather-forecast-day">Thu</div>
 
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-                  alrt="forecast"
-                  width="60"
-                />
+                <img src="" alrt="forecast" width="60" />
                 <div class="weather-forecast-temperature">
                   <span class="weather-forecast-temperature-max">18°</span>
                   <span class="weather-forecast-temperature-min">12°</span>
