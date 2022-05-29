@@ -3,11 +3,10 @@ body {
 }
 
 h1 {
-  color: #878787;
-  font-size: 24px;
+  color: #000;
+  font-size: 34px;
   font-weight: 100;
   line-height: 28px;
-  margin-bottom: 0;
 }
 
 ul {
@@ -17,22 +16,22 @@ ul {
 
 li {
   list-style-type: none;
-  color: #878787;
+  color: #000;
   font-size: 16px;
   font-weight: 100;
   line-height: 18px;
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 800px;
   margin: 100px auto;
 }
 
 .weather-app {
   margin-bottom: 20px;
   padding: 20px;
-  border: 0.5px solid black;
-  border-radius: 2px;
+  border: 1px solid #000;
+  background-color: #f6d4f6;
 }
 
 .overview {
@@ -59,4 +58,24 @@ li {
 
 .description {
   text-transform: capitalize;
+}
+
+.search-box {
+  color: #000;
+  border: none;
+}
+.search-button {
+  color: #000;
+  background-color: white;
+  border: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  color: #000;
 }

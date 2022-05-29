@@ -1,13 +1,5 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
 
   let days = [
     "Sunday",
@@ -38,7 +30,7 @@ function formatDate(timestamp) {
   let number = date.getDate();
   let month = months[date.getMonth()];
   let year = date.getFullYear();
-  return `${day} ${number} ${month} ${year} ${hours}:${minutes}`;
+  return `${day} ${number} ${month} ${year}`;
 }
 
 function formatDay(timestamp) {
@@ -47,6 +39,35 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tues", "Wed", "Thurs"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-day">${day}</div>
+
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+                  alrt="forecast"
+                  width="60"
+                />
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                  <span class="weather-forecast-temperature-min">12°</span>
+                </div>
+              </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
@@ -110,3 +131,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("London");
+displayForecast();
